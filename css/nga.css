@@ -1,0 +1,22 @@
+/* 隐藏广告背景*/
+#custombg {
+    display: none;
+}
+
+/* 修改主菜单*/
+#mainmenu {
+    margin: 0 0 0 0 !important;
+}
+
+.posterinfo img {
+    display: none;
+}
+
+#fast_post_c {
+    display: none !important;
+}
+
+/* 页脚隐藏*/
+#b_nav {
+    display: none;
+}
