@@ -47,6 +47,7 @@
     "page": "background.html"
   },
   "web_accessible_resources": [
-    "js/inject/nga.inject.js"
+    "js/inject/hotKey.js",
+    "img/top.png"
   ]
 }

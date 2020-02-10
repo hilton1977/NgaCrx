@@ -20,3 +20,18 @@
 #b_nav {
     display: none;
 }
+
+/* 跳转页居中*/
+#commonuiwindow {
+    position: fixed !important;
+    left: 35% !important;
+    top: 35% !important;
+}
+
+/* 返回顶部*/
+#returnTop {
+    position: fixed;
+    right: 1%;
+    bottom: 2%;
+    z-index: 9999;
+}
