@@ -8,6 +8,10 @@
     margin: 0 0 0 0 !important;
 }
 
+#toppedtopic,#sub_forums {
+    display: none !important;
+}
+
 .posterinfo img {
     display: none;
 }

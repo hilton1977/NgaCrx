@@ -16,14 +16,18 @@
      * 添加提示和动画
      */
     function topics() {
-        $("#toppedtopic").hide();
-        $("#sub_forums").hide();
         let tip = "<a class='showMore' showId ='#toppedtopic' >[公告]</a>",
             subTip = "<a class='showMore' showId ='#sub_forums'>[子版面]</a>";
         $("#toptopics >div> h3").append(tip).append(subTip);
-        $(".showMore").on("click", function () {
-            $($(this).attr("showId")).slideToggle();
+        $(".showMore").toggle(function () {
+            let id = $(this).attr("showId");
+            $(id).css("cssText", "display:block !important");
+        },function () {
+            let id = $(this).attr("showId");
+            $(id).css("cssText", "display:none !important");
         });
+
+
     }
 
     /**
