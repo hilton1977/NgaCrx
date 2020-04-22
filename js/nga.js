@@ -20,14 +20,14 @@
             subTip = "<a class='showMore' showId ='#sub_forums'>[子版面]</a>";
         $("#toptopics >div> h3").append(tip).append(subTip);
         $(".showMore").toggle(function () {
-            let id = $(this).attr("showId");
-            $(id).css("cssText", "display:block !important");
+            this.display($(this).attr("showId"),true);
         },function () {
-            let id = $(this).attr("showId");
-            $(id).css("cssText", "display:none !important");
+            this.display($(this).attr("showId"),false);
         });
 
-
+        function display(data,status) {
+            $(id).css("cssText", status?"display:block !important":"display:none !important");
+        }
     }
 
     /**
@@ -56,28 +56,16 @@
      */
     function addReturnTop() {
         let temp = document.createElement('img');
-        temp.setAttribute('id', 'returnTop');
+        temp.setAttribute("id", "returnTop");
         temp.src = chrome.extension.getURL("img/top.png");
         document.body.appendChild(temp);
         $("#returnTop").on("click", () => {
             document.scrollingElement.scrollTop = 0;
-        });
+        })
     }
-
-
-    /**
-     * 消息通信
-     */
-    function messageListener(){
-        window.addEventListener("message", function(e) {
-
-        }, false);
-    }
-
 
     addReturnTop();
     simplifyAD();
-    // simplifyNames();
     topics();
     simplifyAv();
     injectJs('js/inject/hotKey.js');
